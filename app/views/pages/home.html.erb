@@ -1,8 +1,17 @@
-<div class="jumbotron jumbotron-home">
+<% if user_signed_in? %>
+    <div class="jumbotron jumbotron-home">
     <div class="container">
-        <h1>Primegistics Client Site</h1>
-        <p>This site is for Primegistics clients only. To inquire about setting up an account, please contact us.</p>
-        <%= link_to "Learn more »", "#", class: "btn btn-primary btn-lg" %> 
+            <h1>Welcome Back To Your Dashboard</h1>
+    <div>
+ </div>    
+
+<% else %>    
+
+    <div class="jumbotron jumbotron-home">
+         <div class="container">
+         <h1>Primegistics Client Site</h1>
+         <p>This site is for Primegistics clients only. To inquire about setting up an account, please contact us.</p>
+          <%= link_to "Learn more »", "#", class: "btn btn-primary btn-lg" %> 
     </div>
 </div>
 <div class="container">
@@ -24,3 +33,4 @@
         </div>
     </div>
 </div>
+<% end %>
